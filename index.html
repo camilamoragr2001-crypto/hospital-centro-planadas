@@ -1,0 +1,100 @@
+<link rel="stylesheet" href="style.css">
+<div class="contenedor">
+
+    <h1>HOSPITAL CENTRO PLANADAS</h1>
+
+    <!-- PANTALLA 1 -->
+    <div id="pantalla1">
+
+        <label>Tipo de documento</label>
+        <select id="tipoDocumento">
+            <option value="">Seleccione</option>
+            <option>CC</option>
+            <option>TI</option>
+            <option>RC</option>
+            <option>CE</option>
+        </select>
+
+        <label>Número de documento</label>
+        <input type="number" id="numeroDocumento">
+
+        <label>Régimen</label>
+        <select id="regimen">
+            <option value="">Seleccione</option>
+            <option>Subsidiado</option>
+            <option>Contributivo</option>
+        </select>
+
+        <label>EPS</label>
+        <select id="eps">
+            <option value="">Seleccione</option>
+            <option>Nueva EPS</option>
+            <option>Sanitas</option>
+            <option>Sura</option>
+        </select>
+
+        <button onclick="ingresar()">INGRESAR</button>
+
+    </div>
+
+    <!-- PANTALLA 2 -->
+    <div id="pantalla2" class="oculto">
+
+        <h2>SELECCIONA EL SERVICIO QUE DESEAS</h2>
+
+        <button onclick="mostrarCitas()">CITAS</button>
+        <button>ORDENAMIENTOS</button>
+        <button>LABORATORIO</button>
+        <button>IMAGENOLOGIA</button>
+
+    </div>
+
+    <!-- PANTALLA 3 -->
+    <div id="pantalla3" class="oculto">
+
+        <h2>SELECCIONA EL SERVICIO DESEADO</h2>
+
+        <label>Especialidad</label>
+
+        <select id="especialidad">
+            <option>Medicina general</option>
+            <option>Urología</option>
+            <option>Psicología</option>
+            <option>Odontología</option>
+        </select>
+
+        <label>Fecha</label>
+
+        <input type="date" id="fecha">
+
+        <table>
+
+            <tr>
+                <th>Agendar</th>
+                <th>Disponibles</th>
+                <th>Médico</th>
+            </tr>
+
+            <tr>
+                <td><input type="radio" name="medico" value="Dr. Juan Pérez"></td>
+                <td>5</td>
+                <td>Dr. Juan Pérez</td>
+            </tr>
+
+            <tr>
+                <td><input type="radio" name="medico" value="Dra. Ana López"></td>
+                <td>3</td>
+                <td>Dra. Ana López</td>
+            </tr>
+
+        </table>
+
+        <button onclick="mostrarResumen()">SIGUIENTE</button>
+
+    </div>
+
+    <!-- RESULTADO -->
+    <div id="resultado" class="oculto"></div>
+
+</div>
+<script src="script.js"></script>
